@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Barcode Receiver'
+  ClientHeight = 32
+  ClientWidth = 260
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Orientations = [Portrait]
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object lblStatus: TLabel
+    Height = 17.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = 'Waiting for a barcode...'
+    Width = 201.000000000000000000
+  end
+  object cbAddReturn: TCheckBox
+    Height = 19.000000000000000000
+    IsChecked = True
+    Position.X = 168.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 5
+    Text = 'Add Return'
+    Width = 120.000000000000000000
+  end
+  object TetheringManager: TTetheringManager
+    Text = 'BarcodeReceiverManager'
+    Left = 48
+    Top = 8
+  end
+  object TetheringAppProfile: TTetheringAppProfile
+    Manager = TetheringManager
+    Text = 'BarcodeReceiver'
+    Actions = <>
+    Resources = <>
+    OnResourceReceived = TetheringAppProfileResourceReceived
+    Left = 128
+    Top = 8
+  end
+end

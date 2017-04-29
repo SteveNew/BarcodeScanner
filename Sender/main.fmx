@@ -1,0 +1,68 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 567
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Orientations = [Portrait]
+  FormFactor.Devices = [iPhone, iPad]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMobile = True
+  DesignerWidth = 360
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 5'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object SpeedButton1: TSpeedButton
+    Height = 121.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 32.000000000000000000
+    StyleLookup = 'buttonstyle'
+    Text = 'Scan barcode'
+    Width = 177.000000000000000000
+    OnClick = SpeedButton1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 56.000000000000000000
+    Position.Y = 200.000000000000000000
+    Width = 257.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Label1: TLabel
+    Height = 23.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 440.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'No receiver found'
+    Width = 297.000000000000000000
+  end
+  object SpeedButton2: TSpeedButton
+    Height = 121.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 272.000000000000000000
+    StyleLookup = 'buttonstyle'
+    Text = 'Send barcode'
+    Width = 177.000000000000000000
+    OnClick = SpeedButton2Click
+  end
+  object TetheringManager1: TTetheringManager
+    OnEndManagersDiscovery = TetheringManager1EndManagersDiscovery
+    OnEndProfilesDiscovery = TetheringManager1EndProfilesDiscovery
+    Text = 'TetheringManager1'
+    Left = 72
+    Top = 472
+  end
+  object TetheringAppProfile1: TTetheringAppProfile
+    Manager = TetheringManager1
+    Text = 'TetheringAppProfile1'
+    Actions = <>
+    Resources = <>
+    Left = 200
+    Top = 472
+  end
+end
